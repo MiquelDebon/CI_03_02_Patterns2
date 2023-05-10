@@ -1,4 +1,4 @@
-package S3_02_N1;
+package S3_02_N1_Observer;
 
 public abstract class Observer {
     protected Observable_BankAgent bankAgent;

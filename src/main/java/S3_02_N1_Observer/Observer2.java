@@ -1,7 +1,6 @@
-package S3_02_N1;
+package S3_02_N1_Observer;
 
 public class Observer2 extends Observer{
-
     public Observer2 (Observable_BankAgent bankAgent){
         this.bankAgent = bankAgent;
         this.bankAgent.add(this);
@@ -11,4 +10,6 @@ public class Observer2 extends Observer{
     public void update() {
         System.out.println("Observer 2: " + bankAgent.getState());
     }
+
+
 }
