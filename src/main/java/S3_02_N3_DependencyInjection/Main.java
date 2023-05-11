@@ -1,7 +1,6 @@
 package S3_02_N3_DependencyInjection;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /*
 Dissenya una classe que mostri en pantalla el preu de diversos articles. Ja que haurà de mostrar-los també en diversos tipus de moneda.
@@ -18,7 +17,11 @@ public class Main {
 
 
         for(Article article : articlesList){
-            System.out.println(new ActualPrice(article, new SterlingPound()).getActualPrice());
+            System.out.println("🇪🇸 Spanish Euro: " + article.getEuroValue());
+            System.out.println("🇬🇧 SterlingPound: " + article.getCurrencyPrice(new SterlingPoundCurrency()));
+            System.out.println("🇺🇸 American Dollar: " + article.getCurrencyPrice(new AmericanDollarCurrency()));
+            System.out.println("🇮🇳 Rupee currency: " + article.getCurrencyPrice(new PakistaniRupeeCurrency()));
+            System.out.println();
         }
 
 

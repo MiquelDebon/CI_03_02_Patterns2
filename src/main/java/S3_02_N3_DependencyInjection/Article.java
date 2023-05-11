@@ -19,5 +19,8 @@ public class Article {
     public double getEuroValue() {
         return euroValue;
     }
+    public double getCurrencyPrice(ForeignCurrency fc){
+        return (double) Math.round(this.euroValue * fc.getFactor()*100)/100;
+    }
 
 }
